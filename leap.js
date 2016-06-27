@@ -32,9 +32,9 @@ prompt.start();
 prompt.get(['year'], (err, result) => {
   const isLeap = checkLeap(result.year);
   if (isLeap) {
-    console.log("Leap year.");
+    console.log('Leap year.');
   } else {
-    console.log("Not a leap year.");
+    console.log('Not a leap year.');
   }
   return isLeap;
 });
