@@ -1,4 +1,3 @@
 {
-  "extends": "airbnb",
-  "no-trailing-spaces": ["error", { "skipBlankLines": true }]
+  "extends": "airbnb"
 }
