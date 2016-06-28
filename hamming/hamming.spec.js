@@ -39,7 +39,7 @@ var compute = function(dna1, dna2){
   if(dna1.length != dna2.length) {
     throw new Error("DNA strands must be of equal length.");
   } else {
-    for(var index in dna1) {
+    for(var index = 0; index < dna1.length; index++) {
       if(dna1.charAt(index) != dna2.charAt(index))
         diff++;
     }
