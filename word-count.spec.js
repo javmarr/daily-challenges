@@ -19,11 +19,48 @@ free: 1
 
 */
 
+// will return an object with format: {word : wordcount}
 function count(string) {
-	return {};
+	var output = {};
+	// var ray = string.split(/\s+|\n+/); // split based on whitespace (tabs, space, etc.)
+	var ray = string.trim().split(/[\s\n\t]+/); // split based on whitespace (tabs, space, etc.)
+	var word = '';
+
+	// init every word as a key for the output
+	for(var i in ray) {
+		// get current word
+		word = ray[i];
+		//lowercase just to keep the count case-insensitive
+		word = word.toLowerCase();
+		output[word] = 0; // init to 0 at first
+	}
+
+	// increase count for each word
+	for(var i in ray) {
+		word = ray[i]; // get current word;
+		word = word.toLowerCase(); //lowercase just to keep the count case-insensitive
+
+		console.log("" + output[word]);
+		output[word]++; // otherwise just add one to the count
+		console.log(word);
+	}
+
+	console.log(``);
+	console.log(`Results: `);
+
+	//output for sanity check and debugging
+	for(var i in output)
+	{
+		console.log(`${i} : ${output[i]}`);
+	}
+
+	console.log(`--------: `);
+	// console.log(`--------: `);
+	return output;
 }
 
-/// -- do not edit below ---
+
+// / -- do not edit below ---
 
 describe('count()', function() {
 
@@ -74,6 +111,7 @@ describe('count()', function() {
 
   it('counts multiple spaces as one', function() {
     var expectedCounts = { hello: 1, world: 1 };
+		console.log();
     expect(count('hello  world')).toEqual(expectedCounts);
   });
 
