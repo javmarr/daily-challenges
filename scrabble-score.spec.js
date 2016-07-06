@@ -34,10 +34,6 @@ And to total:
 - = `5 + 9`
 - = 14
 
-## Extensions
-- You can play a `:double` or a `:triple` letter.
-- You can play a `:double` or a `:triple` word.
-
 ### Instructions
 1. Review the description, and create a scopre method that returns the score based on the rules above.
 2. Once you have a passing test suite, add your code to your daily-challenges repo
