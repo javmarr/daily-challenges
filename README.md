@@ -6,3 +6,4 @@
 | bob.js                 | bob responds to stuff                       |
 | word-count.js          | counts the number of times a word appears   |
 | scrabble-score.js      | counts the score for scrabble               |
+| allergies.js           | checks allegries based on small "test"      |
