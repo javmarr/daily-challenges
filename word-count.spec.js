@@ -21,9 +21,9 @@ free: 1
 
 // will return an object with format: {word : wordcount}
 function count(string) {
-	var output = {};
+  const output = {};
 	// var ray = string.split(/\s+|\n+/); // split based on whitespace (tabs, space, etc.)
-	var ray = string.trim().split(/[\s\n\t]+/); // split based on whitespace (tabs, space, etc.)
+  let ray = string.trim().split(/[\s\n\t]+/); // split based on whitespace (tabs, space, etc.)
 	var word = '';
 
 	// init every word as a key for the output
