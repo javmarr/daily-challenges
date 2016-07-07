@@ -35,84 +35,78 @@ And to total:
 - = 14
 
 ### Instructions
-1. Review the description, and create a scopre method that returns the score based on the rules above.
+1. Review the description, and create a scopre method that returns
+  the score based on the rules above.
 2. Once you have a passing test suite, add your code to your daily-challenges repo
 3. Link us to your scrabble.js file on Slack.
 
 */
 
 function score(string) {
-  var currentChar = '';
-  var total = 0;
+  let currentChar = '';
+  let total = 0;
 
-  if(string == null){
+  if (string == null) {
     return 0;
   }
-  else{
-    for(var i = 0; i < string.length; i++) {
-      currentChar = string.charAt(i);
-      // char is of value  1
-      if(currentChar.search(/[AEIOULNRST]/ig) != -1) {
-        total += 1;
-      }
-      else if(currentChar.search(/[DG]/ig) != -1) {
-        total += 2;
-      }
-      else if(currentChar.search(/[BCMP]/ig) != -1) {
-        total += 3;
-      }
-      else if(currentChar.search(/[FHVWY]/ig) != -1) {
-        total += 4;
-      }
-      else if(currentChar.search(/[K]/ig) != -1) {
-        total += 5;
-      }
-      else if(currentChar.search(/[JX]/ig) != -1) {
-        total += 8;
-      }
-      else if(currentChar.search(/[QZ]/ig) != -1) {
-        total += 10;
-      }
-    }
-    console.log('----');
-    console.log(string);
-    console.log(`total score: ${total}`);
-    return total;
-  }
 
+  for (let i = 0; i < string.length; i++) {
+    currentChar = string.charAt(i);
+    // char is of value  1
+    if (currentChar.search(/[AEIOULNRST]/ig) !== -1) {
+      total += 1;
+    } else if (currentChar.search(/[DG]/ig) !== -1) {
+      total += 2;
+    } else if (currentChar.search(/[BCMP]/ig) !== -1) {
+      total += 3;
+    } else if (currentChar.search(/[FHVWY]/ig) !== -1) {
+      total += 4;
+    } else if (currentChar.search(/[K]/ig) !== -1) {
+      total += 5;
+    } else if (currentChar.search(/[JX]/ig) !== -1) {
+      total += 8;
+    } else if (currentChar.search(/[QZ]/ig) !== -1) {
+      total += 10;
+    }
+  }
+  console.log('----');
+  console.log(string);
+  console.log(`total score: ${total}`);
+  return total;
 }
 
-score("");
+
+score('');
 score(null);
-score("a");
-score("quirky");
-score("street");
-score("OXYPHENBUTAZONE");
-/// -- do not edit below ---
+score('a');
+score('quirky');
+score('street');
+score('OXYPHENBUTAZONE');
+// -- do not edit below ---
 
 
-describe('Scrabble', function() {
-  it('scores an empty word as zero',function() {
+describe('Scrabble', () => {
+  it('scores an empty word as zero', () => {
     expect(score('')).toEqual(0);
   });
 
-  xit('scores a null as zero',function() {
+  xit('scores a null as zero', () => {
     expect(score(null)).toEqual(0);
   });
 
-  xit('scores a very short word',function() {
+  xit('scores a very short word', () => {
     expect(score('a')).toEqual(1);
   });
 
-  xit('scores the word by the number of letters',function() {
+  xit('scores the word by the number of letters', () => {
     expect(score('street')).toEqual(6);
   });
 
-  xit('scores more complicated words with more',function() {
+  xit('scores more complicated words with more', () => {
     expect(score('quirky')).toEqual(22);
   });
 
-  xit('scores case insensitive words',function() {
+  xit('scores case insensitive words', () => {
     expect(score('OXYPHENBUTAZONE')).toEqual(41);
   });
 });
