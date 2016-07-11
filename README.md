@@ -7,3 +7,4 @@
 | word-count.js          | counts the number of times a word appears   |
 | scrabble-score.js      | counts the score for scrabble               |
 | allergies.js           | checks allegries based on small "test"      |
+| atbash-cipher.js       | simple way to encode a string using atbash  |
