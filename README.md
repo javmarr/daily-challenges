@@ -9,6 +9,7 @@
 | allergies.js           | checks allegries based on small "test"               |
 | atbash-cipher.js       | simple way to encode a string using atbash           |
 | luhn.js                | checks if the value if valid using the Luhn formula  |
+| linked-list.js         | doubly linked list using a class                     |
 
 | Python Challenges      |             Description                              |
 |------------------------|------------------------------------------------------|

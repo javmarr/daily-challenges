@@ -1,0 +1,16 @@
+{
+  "name": "linked-list",
+  "version": "1.0.0",
+  "description": "Implement a doubly linked list",
+  "main": "LinkedList.js",
+  "scripts": {
+    "build": "babel linked-list.js -o output-linked-list.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier Marroquin <j_marroquin@live.com> (https://github.com/javmarr/resume)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2"
+  }
+}
